@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillBridge — AI-Powered Adaptive Learning Engine</title>
+    <meta name="description" content="SkillBridge uses AI to parse resumes, analyze skill gaps against job descriptions, and generate personalized, adaptive learning pathways for corporate onboarding.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <!-- Animated background -->
+    <div class="bg-grid"></div>
+    <div class="bg-gradient-orb bg-orb-1"></div>
+    <div class="bg-gradient-orb bg-orb-2"></div>
+    <div class="bg-gradient-orb bg-orb-3"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-content">
+            <div class="nav-brand">
+                <div class="brand-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M16 2L4 8V24L16 30L28 24V8L16 2Z" stroke="url(#brand-gradient)" stroke-width="2" fill="none"/>
+                        <path d="M16 10L10 13V19L16 22L22 19V13L16 10Z" fill="url(#brand-gradient)"/>
+                        <defs>
+                            <linearGradient id="brand-gradient" x1="4" y1="2" x2="28" y2="30">
+                                <stop stop-color="#6366f1"/>
+                                <stop offset="1" stop-color="#a855f7"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <span class="brand-text">SkillBridge</span>
+            </div>
+            <div class="nav-links">
+                <a href="#upload" class="nav-link">Analyze</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#datasets" class="nav-link">Datasets</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                AI-Powered Learning Pathways
+            </div>
+            <h1 class="hero-title">
+                Bridge the <span class="gradient-text">Skill Gap</span><br>
+                with Adaptive Learning
+            </h1>
+            <p class="hero-subtitle">
+                Upload a resume and job description — our AI engine extracts skills, 
+                identifies gaps, and generates a personalized, time-optimized training roadmap.
+            </p>
+            <div class="hero-cta">
+                <a href="#upload" class="btn btn-primary btn-lg">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                    Start Analysis
+                </a>
+                <a href="#how-it-works" class="btn btn-ghost btn-lg">
+                    Learn More →
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-value">270+</span>
+                    <span class="stat-label">Skills Tracked</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">40+</span>
+                    <span class="stat-label">Learning Modules</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">14</span>
+                    <span class="stat-label">Skill Categories</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Process</span>
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">Four intelligent steps from document to personalized pathway</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card" style="--delay: 0">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">📄</div>
+                    <h3>Upload Documents</h3>
+                    <p>Upload a resume (PDF/DOCX/TXT) and paste the target job description.</p>
+                </div>
+                <div class="step-card" style="--delay: 1">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">🔍</div>
+                    <h3>Skill Extraction</h3>
+                    <p>Our NLP engine parses both documents against a 270+ skill taxonomy (O*NET-based).</p>
+                </div>
+                <div class="step-card" style="--delay: 2">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">📊</div>
+                    <h3>Gap Analysis</h3>
+                    <p>Smart comparison identifies gaps, considering proficiency levels and transferable skills.</p>
+                </div>
+                <div class="step-card" style="--delay: 3">
+                    <div class="step-number">04</div>
+                    <div class="step-icon">🗺️</div>
+                    <h3>Adaptive Pathway</h3>
+                    <p>A personalized, phased learning roadmap is generated with time-optimized modules.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upload Section -->
+    <section class="section section-dark" id="upload">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Analyze</span>
+                <h2 class="section-title">Upload & Analyze</h2>
+                <p class="section-subtitle">Provide a resume and job description to generate your personalized pathway</p>
+            </div>
+            
+            <div class="upload-grid">
+                <!-- Resume Upload -->
+                <div class="upload-card" id="resume-card">
+                    <div class="upload-card-header">
+                        <div class="upload-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <polyline points="10 9 9 9 8 9"/>
+                            </svg>
+                        </div>
+                        <h3>Resume</h3>
+                        <p>Upload candidate's resume</p>
+                    </div>
+                    <div class="upload-dropzone" id="resume-dropzone">
+                        <input type="file" id="resume-input" accept=".pdf,.docx,.txt" hidden>
+                        <div class="dropzone-content">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="dropzone-icon">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="17 8 12 3 7 8"/>
+                                <line x1="12" y1="3" x2="12" y2="15"/>
+                            </svg>
+                            <p class="dropzone-text">Drag & drop or <span class="dropzone-browse">browse</span></p>
+                            <p class="dropzone-hint">PDF, DOCX, or TXT (max 16MB)</p>
+                        </div>
+                        <div class="dropzone-file" id="resume-file-info" style="display:none">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                            <span id="resume-filename"></span>
+                            <button class="file-remove" id="resume-remove">&times;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JD Input -->
+                <div class="upload-card" id="jd-card">
+                    <div class="upload-card-header">
+                        <div class="upload-icon jd-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="3" width="20" height="18" rx="2" ry="2"/>
+                                <line x1="8" y1="7" x2="16" y2="7"/>
+                                <line x1="8" y1="11" x2="16" y2="11"/>
+                                <line x1="8" y1="15" x2="12" y2="15"/>
+                            </svg>
+                        </div>
+                        <h3>Job Description</h3>
+                        <p>Paste target role requirements</p>
+                    </div>
+                    <div class="jd-textarea-wrap">
+                        <textarea id="jd-textarea" placeholder="Paste the full job description here...&#10;&#10;Example:&#10;Senior Software Engineer&#10;&#10;Requirements:&#10;- 5+ years of experience with Python&#10;- Strong knowledge of React and Node.js&#10;- Experience with AWS and Docker&#10;- Machine Learning experience preferred"></textarea>
+                        <div class="jd-char-count"><span id="jd-count">0</span> characters</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="analyze-actions">
+                <button class="btn btn-primary btn-xl" id="analyze-btn" disabled>
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polygon points="10 8 16 12 10 16 10 8"/>
+                    </svg>
+                    Generate Learning Pathway
+                </button>
+                <p class="analyze-hint">Both resume and job description are required</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay" style="display:none">
+        <div class="loading-card">
+            <div class="loading-spinner">
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+            </div>
+            <h3>Analyzing...</h3>
+            <p class="loading-step" id="loading-step">Parsing resume...</p>
+            <div class="loading-bar">
+                <div class="loading-bar-fill" id="loading-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Section -->
+    <section class="section" id="results" style="display:none">
+        <div class="container">
+            <!-- Results Header -->
+            <div class="results-header">
+                <div class="section-header">
+                    <span class="section-badge success-badge">Analysis Complete</span>
+                    <h2 class="section-title">Your Personalized Pathway</h2>
+                </div>
+            </div>
+
+            <!-- Summary Cards -->
+            <div class="summary-grid" id="summary-grid">
+                <!-- Filled dynamically -->
+            </div>
+
+            <!-- Tabs -->
+            <div class="results-tabs">
+                <button class="tab-btn active" data-tab="pathway" id="tab-pathway">🗺️ Learning Pathway</button>
+                <button class="tab-btn" data-tab="gaps" id="tab-gaps">📊 Skill Gaps</button>
+                <button class="tab-btn" data-tab="skills" id="tab-skills">🎯 Skills Overview</button>
+                <button class="tab-btn" data-tab="metrics" id="tab-metrics">📈 Metrics</button>
+            </div>
+
+            <!-- Tab: Pathway -->
+            <div class="tab-content active" id="content-pathway">
+                <div id="pathway-container">
+                    <!-- Filled dynamically -->
+                </div>
+            </div>
+
+            <!-- Tab: Gaps -->
+            <div class="tab-content" id="content-gaps">
+                <div class="gaps-layout">
+                    <div class="radar-chart-container" id="radar-chart-container">
+                        <canvas id="radar-canvas" width="450" height="450"></canvas>
+                    </div>
+                    <div class="gaps-list" id="gaps-list">
+                        <!-- Filled dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Skills -->
+            <div class="tab-content" id="content-skills">
+                <div class="skills-comparison" id="skills-comparison">
+                    <!-- Filled dynamically -->
+                </div>
+            </div>
+
+            <!-- Tab: Metrics -->
+            <div class="tab-content" id="content-metrics">
+                <div id="metrics-container">
+                    <!-- Filled dynamically -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Datasets Section -->
+    <section class="section section-dark" id="datasets">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Transparency</span>
+                <h2 class="section-title">Datasets & Models</h2>
+                <p class="section-subtitle">Full disclosure of all data sources and models used</p>
+            </div>
+            <div class="datasets-grid">
+                <div class="dataset-card">
+                    <div class="dataset-icon">🏛️</div>
+                    <h3>O*NET Skills & Knowledge</h3>
+                    <p>Industry-standard occupational taxonomy from the U.S. Department of Labor. Used as the foundation for our 270+ skill taxonomy and proficiency scales.</p>
+                    <a href="https://www.onetcenter.org/db_releases.html" target="_blank" class="dataset-link">onetcenter.org →</a>
+                </div>
+                <div class="dataset-card">
+                    <div class="dataset-icon">📊</div>
+                    <h3>Kaggle Resume Dataset</h3>
+                    <p>Collection of 2,400+ resumes across various fields. Used for validation and testing of skill extraction accuracy.</p>
+                    <a href="https://www.kaggle.com/datasets/snehaanbhawal/resume-dataset/data" target="_blank" class="dataset-link">kaggle.com →</a>
+                </div>
+                <div class="dataset-card">
+                    <div class="dataset-icon">🤖</div>
+                    <h3>spaCy NLP (Open Source)</h3>
+                    <p>Industrial-strength NLP library used for text processing. Our skill extraction uses custom taxonomy-based matching with confidence scoring.</p>
+                    <a href="https://spacy.io/" target="_blank" class="dataset-link">spacy.io →</a>
+                </div>
+                <div class="dataset-card">
+                    <div class="dataset-icon">⚙️</div>
+                    <h3>Original Adaptive Logic</h3>
+                    <p>Our custom weighted scoring algorithm considers gap severity, prerequisite depth, transferable skills, and role priority to optimize learning pathways.</p>
+                    <span class="dataset-link">Custom Implementation</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="brand-icon small">
+                        <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 2L4 8V24L16 30L28 24V8L16 2Z" stroke="url(#footer-gradient)" stroke-width="2" fill="none"/>
+                            <path d="M16 10L10 13V19L16 22L22 19V13L16 10Z" fill="url(#footer-gradient)"/>
+                            <defs>
+                                <linearGradient id="footer-gradient" x1="4" y1="2" x2="28" y2="30">
+                                    <stop stop-color="#6366f1"/>
+                                    <stop offset="1" stop-color="#a855f7"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <span>SkillBridge</span>
+                </div>
+                <p class="footer-text">AI-Driven Adaptive Learning Engine for Corporate Onboarding</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

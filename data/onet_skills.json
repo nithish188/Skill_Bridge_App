@@ -1,0 +1,63 @@
+{
+  "categories": {
+    "Programming Languages": {
+      "skills": ["Python", "Java", "JavaScript", "TypeScript", "C++", "C#", "Go", "Rust", "Ruby", "PHP", "Swift", "Kotlin", "Scala", "R", "MATLAB", "Perl", "Shell Scripting", "Bash", "PowerShell", "SQL", "HTML", "CSS", "Dart"],
+      "weight": 0.9
+    },
+    "Web Development": {
+      "skills": ["React", "Angular", "Vue.js", "Node.js", "Express.js", "Django", "Flask", "Spring Boot", "ASP.NET", "Ruby on Rails", "Next.js", "Nuxt.js", "Svelte", "REST API", "GraphQL", "WebSocket", "HTML5", "CSS3", "Sass", "Bootstrap", "Tailwind CSS", "jQuery", "Webpack", "Vite"],
+      "weight": 0.85
+    },
+    "Data Science & ML": {
+      "skills": ["Machine Learning", "Deep Learning", "Natural Language Processing", "Computer Vision", "TensorFlow", "PyTorch", "Keras", "Scikit-learn", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Jupyter", "Data Analysis", "Statistical Modeling", "Feature Engineering", "Model Deployment", "MLOps", "A/B Testing", "Recommendation Systems", "Time Series Analysis", "Reinforcement Learning"],
+      "weight": 0.9
+    },
+    "Cloud & DevOps": {
+      "skills": ["AWS", "Azure", "Google Cloud Platform", "Docker", "Kubernetes", "Terraform", "Ansible", "Jenkins", "CI/CD", "GitHub Actions", "GitLab CI", "CloudFormation", "Serverless", "Lambda", "EC2", "S3", "Load Balancing", "Auto Scaling", "Monitoring", "Prometheus", "Grafana", "ELK Stack"],
+      "weight": 0.8
+    },
+    "Databases": {
+      "skills": ["MySQL", "PostgreSQL", "MongoDB", "Redis", "Elasticsearch", "Cassandra", "DynamoDB", "Oracle", "SQL Server", "SQLite", "Neo4j", "Firebase", "Supabase", "Database Design", "Query Optimization", "Data Modeling", "ETL", "Data Warehousing", "BigQuery", "Snowflake", "Redshift"],
+      "weight": 0.8
+    },
+    "Mobile Development": {
+      "skills": ["React Native", "Flutter", "iOS Development", "Android Development", "Swift", "Kotlin", "Xamarin", "Ionic", "Mobile UI Design", "App Store Deployment", "Push Notifications", "Mobile Security"],
+      "weight": 0.75
+    },
+    "Security": {
+      "skills": ["Cybersecurity", "Penetration Testing", "OWASP", "Encryption", "Authentication", "OAuth", "JWT", "SSL/TLS", "Firewall", "Intrusion Detection", "Security Auditing", "Compliance", "GDPR", "SOC 2", "Vulnerability Assessment", "Security Architecture"],
+      "weight": 0.85
+    },
+    "Project Management": {
+      "skills": ["Agile", "Scrum", "Kanban", "JIRA", "Confluence", "Project Planning", "Risk Management", "Stakeholder Management", "Budget Management", "Resource Planning", "Sprint Planning", "Retrospectives", "Product Roadmap", "OKRs"],
+      "weight": 0.7
+    },
+    "Soft Skills": {
+      "skills": ["Communication", "Leadership", "Teamwork", "Problem Solving", "Critical Thinking", "Time Management", "Adaptability", "Creativity", "Mentoring", "Presentation Skills", "Negotiation", "Conflict Resolution", "Decision Making", "Emotional Intelligence"],
+      "weight": 0.6
+    },
+    "Data Engineering": {
+      "skills": ["Apache Spark", "Apache Kafka", "Airflow", "Hadoop", "Hive", "Pig", "Data Pipeline", "Stream Processing", "Batch Processing", "Data Lake", "Data Governance", "Data Quality", "Schema Design", "API Integration"],
+      "weight": 0.85
+    },
+    "AI & GenAI": {
+      "skills": ["Large Language Models", "Prompt Engineering", "LangChain", "Vector Databases", "RAG", "Fine-tuning", "GPT", "BERT", "Transformers", "Hugging Face", "OpenAI API", "Generative AI", "AI Ethics", "Responsible AI"],
+      "weight": 0.9
+    },
+    "Testing & QA": {
+      "skills": ["Unit Testing", "Integration Testing", "E2E Testing", "Selenium", "Cypress", "Jest", "Pytest", "Test Automation", "Performance Testing", "Load Testing", "TDD", "BDD", "Code Review", "Quality Assurance"],
+      "weight": 0.7
+    },
+    "Design & UX": {
+      "skills": ["UI Design", "UX Design", "Figma", "Sketch", "Adobe XD", "User Research", "Wireframing", "Prototyping", "Design Systems", "Accessibility", "Responsive Design", "Information Architecture", "Usability Testing"],
+      "weight": 0.65
+    },
+    "Business & Analytics": {
+      "skills": ["Business Analysis", "Requirements Gathering", "Data Visualization", "Tableau", "Power BI", "Looker", "KPI Tracking", "Market Research", "Competitive Analysis", "Financial Modeling", "Strategy", "Process Improvement"],
+      "weight": 0.7
+    }
+  },
+  "source": "Adapted from O*NET OnLine (https://www.onetcenter.org/) - Technology Skills, Knowledge, and Work Activities databases",
+  "version": "1.0",
+  "last_updated": "2025-01-15"
+}
