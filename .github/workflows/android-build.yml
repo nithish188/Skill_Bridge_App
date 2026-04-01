@@ -1,0 +1,26 @@
+name: Android Build (Buildozer)
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build with Buildozer
+        uses: ArtemSerebrennikov/buildozer-action@v1
+        with:
+          buildozer_version: master
+          python_version: 3.9
+        env:
+          BUILDOZER_ALLOW_ORG_NAME: 1
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v3
+        with:
+          name: SkillBridge-Android-APK
+          path: bin/*.apk
