@@ -46,7 +46,7 @@ android.minapi = 21
 android.private_storage = True
 
 # (str) Android entry point, default is to use start.py
-android.entrypoint = android_main.py
+android.entrypoint = main.py
 
 # (list) List of Java files to add to the android project (for WebView bridge)
 #android.add_src =

@@ -11,6 +11,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Cache Buildozer
+        uses: actions/cache@v3
+        with:
+          path: .buildozer
+          key: ${{ runner.os }}-buildozer-${{ hashFiles('buildozer.spec') }}
+
       - name: Build with Buildozer
         uses: ArtemSerebrennikov/buildozer-action@v1
         with:
@@ -20,7 +26,7 @@ jobs:
           BUILDOZER_ALLOW_ORG_NAME: 1
 
       - name: Upload APK
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: SkillBridge-Android-APK
           path: bin/*.apk
