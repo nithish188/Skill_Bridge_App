@@ -17,7 +17,7 @@ DEPLOYMENT OPTIONS:
 # CONFIGURE YOUR SERVER URL HERE
 # If running on local network: use your PC's IP (e.g. 192.168.1.5:5000)
 # If deployed to cloud: use your deployment URL
-SERVER_URL = "http://192.168.1.100:5000"
+SERVER_URL = "https://skillbridge-app-vl5t.onrender.com"
 # =====================================================================
 
 from kivy.app import App
