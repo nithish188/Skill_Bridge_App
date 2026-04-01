@@ -19,7 +19,7 @@ version = 1.0.0
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy,flask,pdfplumber,python-docx,werkzeug
+requirements = python3,kivy,pyjnius,flask,pdfplumber,python-docx,werkzeug
 
 # (str) Custom source folders for requirements
 # (list) Garden requirements
