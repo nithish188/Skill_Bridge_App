@@ -2,24 +2,28 @@ name: Android Build (Buildozer)
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [main, master]
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-22.04
-    steps:
-      - uses: actions/checkout@v3
 
-      - name: Install Dependencies
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+
+      - name: Install system dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y \
-            python3-pip \
             build-essential \
             git \
-            python3 \
-            python3-dev \
             ffmpeg \
             libsdl2-dev \
             libsdl2-image-dev \
@@ -31,13 +35,23 @@ jobs:
             libavcodec-dev \
             zlib1g-dev \
             libffi-dev \
-            libssl-dev
+            libssl-dev \
+            autoconf \
+            automake \
+            libtool \
+            pkg-config \
+            cmake \
+            unzip \
+            openjdk-17-jdk
 
-      - name: Build with Buildozer
-        uses: ArtemSerebrennikov/buildozer-action@v1
-        with:
-          buildozer_version: master
-          python_version: 3.9
+      - name: Install Buildozer and Cython
+        run: |
+          pip install --upgrade pip setuptools wheel
+          pip install buildozer cython virtualenv
+
+      - name: Build APK
+        run: |
+          yes | buildozer android debug 2>&1 | tail -50
         env:
           BUILDOZER_ALLOW_ORG_NAME: 1
 
