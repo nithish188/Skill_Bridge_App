@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#6366f1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="SkillBridge">
+    <link rel="manifest" href="/static/manifest.json">
+    <link rel="apple-touch-icon" href="/static/img/icon.png">
     <title>SkillBridge — AI-Powered Adaptive Learning Engine</title>
     <meta name="description" content="SkillBridge uses AI to parse resumes, analyze skill gaps against job descriptions, and generate personalized, adaptive learning pathways for corporate onboarding.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -339,5 +346,15 @@
     </footer>
 
     <script src="/static/js/app.js"></script>
+    <script>
+      // Register Service Worker for PWA
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/static/sw.js')
+            .then(reg => console.log('[PWA] Service Worker registered:', reg.scope))
+            .catch(err => console.log('[PWA] SW registration failed:', err));
+        });
+      }
+    </script>
 </body>
 </html>
